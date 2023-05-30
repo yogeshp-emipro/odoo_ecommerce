@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+
+    <template id="custompage">
+        <t t-call="website.layout">
+            <div class="product_div">
+
+            </div>
+            <button type="button" class="product_data btn btn-secondary">
+                <h5>Get Product</h5>
+            </button>
+        </t>
+    </template>
+
+    <template id="product_data">
+        <div>
+            <b>
+                <t t-esc="product"/>
+            </b>
+        </div>
+    </template>
+</odoo>
