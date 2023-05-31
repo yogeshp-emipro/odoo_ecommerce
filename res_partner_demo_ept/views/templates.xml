@@ -4,12 +4,10 @@
 
     <template id="custompage">
         <t t-call="website.layout">
-            <div class="product_div">
-
-            </div>
             <button type="button" class="product_data btn btn-secondary">
                 <h5>Get Product</h5>
             </button>
+            <div class="product_div" style="border: 1px solid red; margin:4px"/>
         </t>
     </template>
 

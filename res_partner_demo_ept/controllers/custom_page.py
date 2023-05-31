@@ -15,6 +15,8 @@ class CustomPage(http.Controller):
     @http.route(['/product_data'], type='json', auth="public", website=True)
     def get_product_data(self):
         product = request.env['product.template'].search([('website_published','=',True)],limit=1)
-        print('Products are :',product)
-        values={'product':product}
-        return request.render('res_partner_demo_ept.product_data', values)
+
+        values={'product':product._get_combination_info()}
+
+        return request.env.ref('res_partner_demo_ept.product_data')._render(values)
+

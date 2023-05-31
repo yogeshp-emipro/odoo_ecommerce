@@ -9,9 +9,9 @@ publicWidget.registry.websiteCustomData = publicWidget.Widget.extend({
         'click .product_data': '_onClickGetProductData',
     },
     _onClickGetProductData:function(){
-        alert('Testing')
         ajax.jsonRpc('/product_data', 'call').then(function(data) {
                         $(".product_div").html(data);
+                        console.log(data)
         });
     },})
 })
