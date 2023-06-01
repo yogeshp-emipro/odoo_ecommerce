@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="product_brand_ept_view_tree" model="ir.ui.view">
+        <field name="name">product.brand.ept.view.tree</field>
+        <field name="model">product.brand.ept</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="logo"/>
+            </tree>
+        </field>
+    </record>
+    <record id="product_brand_ept_view_form" model="ir.ui.view">
+        <field name="name">product.brand.ept.view.form</field>
+        <field name="model">product.brand.ept</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="logo"/>
+                        </group>
+                        <group>
+                            <field name="website_id"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Products">
+                            <field name="product_ids"/>
+                        </page>
+                    </notebook>
+                </sheet>
+
+            </form>
+        </field>
+    </record>
+    <record id="product_brand_ept_view_kanban" model="ir.ui.view">
+        <field name="name">product.brand.ept.view.kanban</field>
+        <field name="model">product.brand.ept</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="name"/>
+                <field name="logo"/>
+                <field name="website_id"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                            <div class="oe_kanban_details">
+                                <ul>
+                                    <li>
+                                        Name:
+                                        <field name="name"/>
+                                    </li>
+                                    <li>
+                                        Logo:
+                                        <field name="logo"/>
+                                    </li>
+                                    <li>
+                                        Website:
+                                        <field name="website_id"/>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+
+    <record id="product_brand_ept_action" model="ir.actions.act_window">
+        <field name="name">Products Brands</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">product.brand.ept</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <div>
+                <h2>Creating the Product Brand.</h2>
+            </div>
+        </field>
+    </record>
+
+
+    <menuitem id="product_brand_config_settings_menu"
+              name="Products Brands"
+              parent="website.menu_website_global_configuration"
+              action="product_brand_ept_action"
+    />
+
+</odoo>
+
+
+
