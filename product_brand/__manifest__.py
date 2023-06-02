@@ -8,7 +8,8 @@
     'data': ['security/product_brand_security.xml',
              'security/ir.model.access.csv',
              'views/product_brand_ept_view.xml',
-             'views/product_template_inherited_view.xml'
+             'views/product_template_inherited_view.xml',
+             'views/templates.xml'
              ]
 }
 

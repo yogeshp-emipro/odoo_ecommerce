@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="product_brand_attributes" inherit_id="website_sale.products_attributes">
+        <xpath expr="//form[hasclass('js_attributes')]/ul/t[@t-foreach='attributes']"
+               position="after">
+            <strong>Brand</strong>
+            <div class="flex-column">
+                <t t-foreach="brands" t-as="b">
+                    <div class="custom-control custom-checkbox mb-1">
+                        <input type="checkbox" name="attrib" t-att-value="'%s-%s' % (0,b.id)" class="form-check-input"
+                               t-att-checked="'checked' if b.id in attrib_set else None" t-att-title="b.name"/>
+                        <label class=" form-check-label font-weight-normal" t-att-for="'%s-%s' % (0,b.id)" t-field=" b.name"/>
+                    </div>
+                </t>
+            </div>
+        </xpath>
+    </template>
+</odoo>
+
+
