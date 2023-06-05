@@ -1,0 +1,48 @@
+<odoo>
+    <data>
+        <template id="custom_snippets_demo_temp" name="Custom Snippets">
+            <section class="s_references bg-gray-lighter">
+                <div class="container">
+                    <h3>
+                        <center>
+                            <b>Apple Products !!</b>
+                        </center>
+                        <div>
+                            <h5>This is brand new latest items .</h5>
+                        </div>
+                    </h3>
+                    <span class="column">
+                        <span class="alert alert-danger">
+                            <img src="/custom_snippet/static/src/img/snippets/iphone1.jpeg"
+                                 class="img img-responsive" alt="Demo"/>
+                        </span>
+                    </span>
+                    <span class="column">
+                        <span class="alert alert-danger">
+                            <img src="/custom_snippet/static/src/img/snippets/iwatch0.jpeg"
+                                 class="img img-responsive" alt="Demo"/>
+                        </span>
+                    </span>
+                    <span class="column">
+                        <span class="alert alert-danger">
+                            <img src="/custom_snippet/static/src/img/snippets/iwatch1.jpeg"
+                                 class="img img-responsive" alt="Demo"/>
+                        </span>
+                    </span>
+                    <span class="column">
+                        <span class="alert alert-danger">
+                            <img src="/custom_snippet/static/src/img/snippets/macbook0.jpeg"
+                                 class="img img-responsive" alt="Demo"/>
+                        </span>
+                    </span>
+                    <span class="column">
+                        <span class="alert alert-danger">
+                            <img src="/custom_snippet/static/src/img/snippets/macbook1.jpeg"
+                                 class="img img-responsive" alt="Demo"/>
+                        </span>
+                    </span>
+                </div>
+            </section>
+        </template>
+    </data>
+</odoo>
