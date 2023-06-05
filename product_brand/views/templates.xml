@@ -7,8 +7,8 @@
             <div class="flex-column">
                 <t t-foreach="brands" t-as="b">
                     <div class="custom-control custom-checkbox mb-1">
-                        <input type="checkbox" name="attrib" t-att-value="'%s-%s' % (0,b.id)" class="form-check-input"
-                               t-att-checked="'checked' if b.id in attrib_set else None" t-att-title="b.name"/>
+                        <input type="checkbox" name="attrib" t-att-value="'0-%s' % b.id" class="form-check-input"
+                               t-att-checked="'checked' if [0,b.id] in attrib_values else None" t-att-title="b.name"/>
                         <label class=" form-check-label font-weight-normal" t-att-for="'%s-%s' % (0,b.id)" t-field=" b.name"/>
                     </div>
                 </t>
